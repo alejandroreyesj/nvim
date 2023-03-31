@@ -66,19 +66,24 @@ return require('packer').startup(function(use)
     use({ 'rose-pine/neovim', as = 'rose-pine' })
     use({ 'rstacruz/vim-closer' })
     -- Copilot
-    use( { "github/copilot.vim" })
-    use ({
+    use({ "github/copilot.vim" })
+    use({
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     })
-    use ({
+    use({
         'tpope/vim-surround'
     })
-    use ({'airblade/vim-gitgutter'})
-    use ({
+    use({ 'airblade/vim-gitgutter' })
+    use({
         'nvim-tree/nvim-tree.lua'
     })
-      use ({'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
-    )
+    use({ 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' })
+    use({
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    })
 end)
 -- Simple plugins can be specified as strings

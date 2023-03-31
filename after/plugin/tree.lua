@@ -183,7 +183,7 @@ require("nvim-tree").setup {     -- BEGIN_DEFAULT_OPTS
             },
         },
         open_file = {
-            quit_on_open = false,
+            quit_on_open = true,
             resize_window = true,
             window_picker = {
                 enable = true,
@@ -237,3 +237,7 @@ require("nvim-tree").setup {     -- BEGIN_DEFAULT_OPTS
         },
     },
 }     -- END_DEFAULT_OPTS
+
+-- Run :NvimTreeToggle to toggle the tree using Ctrl+e
+vim.api.nvim_set_keymap("n", "<C-e>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+-- Run :NvimTreeClose
