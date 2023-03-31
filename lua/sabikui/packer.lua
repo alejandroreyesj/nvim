@@ -2,7 +2,6 @@
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
-
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
@@ -64,7 +63,6 @@ return require('packer').startup(function(use)
     use({ "catppuccin/nvim", as = "catppuccin" })
     use('folke/tokyonight.nvim')
     use({ 'rose-pine/neovim', as = 'rose-pine' })
-    use({ 'rstacruz/vim-closer' })
     -- Copilot
     use({ "github/copilot.vim" })
     use({
@@ -83,6 +81,30 @@ return require('packer').startup(function(use)
         'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup()
+        end
+    })
+    use({
+        'windwp/nvim-autopairs',
+        config = function()
+            require('nvim-autopairs').setup()
+        end
+    })
+    use({
+        'norcalli/nvim-colorizer.lua',
+        config = function()
+            require('colorizer').setup()
+        end
+    })
+    use({
+        'folke/which-key.nvim',
+        config = function()
+            require('which-key').setup()
+        end
+    })
+    use({
+        'folke/trouble.nvim',
+        config = function()
+            require('trouble').setup()
         end
     })
 end)
