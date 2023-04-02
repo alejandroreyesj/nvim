@@ -107,5 +107,6 @@ return require('packer').startup(function(use)
             require('trouble').setup()
         end
     })
+    use({'simrat39/rust-tools.nvim'})
 end)
 -- Simple plugins can be specified as strings
