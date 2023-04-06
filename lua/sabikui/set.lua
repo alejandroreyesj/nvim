@@ -14,6 +14,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.textwidth = 120
 vim.opt.wrapmargin = 0
+vim.opt.breakindent = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -31,3 +32,5 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "120"
+
+vim.opt.autochdir = true
